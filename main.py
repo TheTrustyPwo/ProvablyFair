@@ -21,13 +21,8 @@ def generate(nonce: int):
         client.encode("utf-8"),
         hashlib.sha512).hexdigest()  # HMAC-SHA512 Hash
     decimal = int(signature[:8], 16)  # Convert first 8 characters to base 16 decimal
-    return min(round(decimal / 429496.7295), 10000)  # To whole number and ensure number <= 10000
-
-
-def main():
-    for nonce in range(1, 2):
-        print(generate(nonce))
+    return min(round(decimal / 429496.7295), MAX_NUMBER)  # To whole number and ensure number <= 10000
 
 
 if __name__ == "__main__":
-    main()
+    print("Generated Number:", generate(0))
