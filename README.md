@@ -1,5 +1,4 @@
 # ProvablyFair
-A Provably Fair number generator
 
 ##What is this?
 This is a really simple but useful random number generator. It uses cryptographic ways
