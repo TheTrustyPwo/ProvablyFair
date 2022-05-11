@@ -1,10 +1,10 @@
 # ProvablyFair
 
-##What is this?
+## What is this?
 This is a really simple but useful random number generator. It uses cryptographic ways
 to generate and ensure that the server cannot generate a number that is in their favour.
 
-##How does it work?
+## How does it work?
 The number is generated with 3 parameters - the server seed, client seed and the nonce.
 Out of these, we will only show the user the SHA256 hash of the server seed used. The client
 is able to modify the client seed to their own liking. The nonce can be used in different ways: It
@@ -14,7 +14,7 @@ be shown to the client as well, leaving only the server seed unknown to the clie
 number has been generated. After the number has been generated and all parameters used to generate number
 has been shown to the client, the client can then verify the number by using the following algorithms.
 
-##How do we generate the number?
+## How do we generate the number?
 Assuming we are generating a number between 1 and  100, we would use the following way:
 ```
 Two strings are created:
@@ -26,6 +26,6 @@ This decimal is then divided by 42949672.95 and rounded off to the nearest whole
 This whole number is used as the secret, with the maximum possible value being 100
 ```
 
-##Applications
+## Applications
 This system is mainly used in the digital world, such as online gambling, giveaways, contests,
 fraud prevention and manipulation with predictable transactions on exchanges
